@@ -1,4 +1,4 @@
-#4 - Minikube and kubectl - Local Kubernetes Cluster
+# 4 - Minikube and kubectl - Local Kubernetes Cluster
 
 Installing minikube https://minikube.sigs.k8s.io/docs/start/
 
@@ -37,7 +37,7 @@ Use proxy for starting minikube (https://minikube.sigs.k8s.io/docs/handbook/vpn_
 
     kubectl create deployment mongo-deployment --image=mongo
     # did not work at first, deleted the deployment and recreated it, then it worked
-    kubectl delete deplyoment mongo-deployment
+    kubectl delete deployment mongo-deployment
 
 Connect into a pod
 
@@ -48,18 +48,22 @@ Apply a new file
 
     kubectl apply -f nginx-deployment.yaml
 
-# 6 YAML Configuration File
+# 6 - YAML Configuration File
+
+Creating or updating a deployment
 
     kubectl apply -f nginx-deployment.yaml
     kubectl apply -f nginx-service.yaml
+    kubectl delete -f nginx-deployment.yaml
 
     kubectl get services
+    kubectl get svc
 
 Output with more information like IP address
 
     kubectl get pods -o wide
 
-# 7 
+# 7 - Complete Demo Project - Deploying Application in Kubernetes Cluster
 
 Create base64 password in bash for usage in secrets.
 This is still not secure and not encrypted!
