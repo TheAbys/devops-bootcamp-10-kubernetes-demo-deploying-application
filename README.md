@@ -248,3 +248,25 @@ Checking ingress
     kubectl describe ingress dashboard-ingress -n kubernetes-dashboard
 
 
+# 11 - Volumes - Persisting Application Data
+
+Persistant volumes are not namespaced and available to the whole cluster.
+You can basically "link" Cloud storage, local storage, whatever as a "plugin" into Kubernetes.
+Someone has to manage, meaning backup etc., the storage.
+
+Local volume types violate the 2nd and 3rd requirement for data persistance, as they are tied to one specific node and do not survive cluster crashes.
+
+## Persistant volume
+
+Persistant volume is basically on the administrator side. An administrator must provide the storage whereever he thinks it's reasonable. For example in the cloud, self-hosted, ...
+There are multiple types to choose as each storage works different and needs different configuration.
+
+## Persistant volume claim
+
+The persistance volume claim just claims a specific size on that peristant volume.
+A developer knows his application or database requires x amount of file space. Therefore he can claim the space without ever knowing where it is hosted.
+
+## Storage class
+
+Can also by claimed by a persistant volume claim.
+The storage class then provisions a persistant volume which then is actually claimed.
