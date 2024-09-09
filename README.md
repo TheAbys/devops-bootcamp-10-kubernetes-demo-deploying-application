@@ -1,3 +1,5 @@
+[Notes overview](https://github.com/TheAbys/devops-bootcamp-certification-project/blob/master/README.md)
+
 # 4 - Minikube and kubectl - Local Kubernetes Cluster
 
 Installing minikube https://minikube.sigs.k8s.io/docs/start/
