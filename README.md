@@ -28,8 +28,8 @@ Creating an example deployment and checking its state
 
 Use proxy for starting minikube (https://minikube.sigs.k8s.io/docs/handbook/vpn_and_proxy/)
 
-    export HTTP_PROXY=http://http-proxy.krones-deu.krones-group.com:3128
-    export HTTPS_PROXY=http://http-proxy.krones-deu.krones-group.com:3128
+    export HTTP_PROXY=<http-proxy>
+    export HTTPS_PROXY=<https-proxy>
     export NO_PROXY=localhost,127.0.0.1,10.96.0.0/12,192.168.59.0/24,192.168.49.0/24,192.168.39.0/24
     minikube start
 
